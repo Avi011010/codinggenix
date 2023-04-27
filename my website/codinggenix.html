@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingGenix - Learn Programming with Tips and Tricks</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Variables for color scheme */
+        :root {
+            --dark-bg: #121212;
+            --dark-fg: #ffffff;
+            --dark-accent: #00ff00;
+            --light-bg: #ffffff;
+            --light-fg: #000000;
+            --light-accent: #00ff00;
+        }
+
+        /* Dark theme */
+        .dark-theme {
+            background-color: var(--dark-bg);
+            color: var(--dark-fg);
+        }
+
+        .dark-theme .navbar {
+            background-color: var(--dark-bg);
+        }
+
+        .dark-theme .navbar-brand {
+            color: var(--dark-accent);
+        }
+
+        .dark-theme .nav-link {
+            color: var(--dark-fg);
+        }
+
+        .dark-theme .nav-link:hover {
+            color: var(--dark-accent);
+        }
+
+        .dark-theme .jumbotron {
+            background-color: var(--dark-bg);
+            border-color: var(--dark-accent);
+        }
+
+        .dark-theme .btn-primary {
+            background-color: var(--dark-accent);
+            border-color: var(--dark-accent);
+        }
+
+        .dark-theme .btn-primary:hover {
+            background-color: var(--dark-fg);
+            border-color: var(--dark-fg);
+        }
+
+        /* Light theme */
+        .light-theme {
+            background-color: var(--light-bg);
+            color: var(--light-fg);
+        }
+
+        .light-theme .navbar {
+            background-color: var(--light-bg);
+        }
+
+        .light-theme .navbar-brand {
+            color: var(--light-accent);
+        }
+
+        .light-theme .nav-link {
+            color: var(--light-fg);
+        }
+
+        .light-theme .nav-link:hover {
+            color: var(--light-accent);
+        }
+
+        .light-theme .jumbotron {
+            background-color: var(--light-bg);
+            border-color: var(--light-accent);
+        }
+
+        .light-theme .btn-primary {
+            background-color: var(--light-accent);
+            border-color: var(--light-accent);
+        }
+
+        .light-theme .btn-primary:hover {
+            background-color: var(--light-fg);
+            border-color: var(--light-fg);
+        }
+
+        /* Common styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar styles */
+        .navbar-toggler:focus,
+        .navbar-toggler:hover,
+          button:focus,
+          button:hover{
+          outline:none !important;
+          box-shadow:none !important;
+          }
+          
+          /* Theme toggle styles */
+          input[type=checkbox]{
+              height: 0;
+              width: 0;
+              visibility:hidden;
+          }
+          
+          label{
+              cursor:pointer;
+              text-indent:-9999px;
+              width: 52px;
+              height: 27px;
+              background:#121212;
+              display:block;
+              border-radius:100px;
+              position:relative;
+          }
+          
+          label::after{
+              content:'';
+              position:absolute;
+              top:-2px;
+              left:-2px;
+              width: 25px;
+              height: 25px;
+              background:#fff;
+              border-radius:90px;
+              transition:.3s ease-in-out
+          }
+          
+          input:checked + label{
+              background:#fff
+          }
+          
+          input:checked + label::after{
+              left:-2px; 
+              transform : translateX(25px)
+          }
+          
+          label::before{
+              content:'';
+              position:absolute;
+              top:-2px; 
+              left:-2px; 
+              width : 25px; 
+              height : 25px; 
+              background:#fff; 
+              border-radius : 90px; 
+              transform : scale(0); 
+              transition : all 0.3s ease-in-out;
+          }
+          
+          input:checked + label::before{
+              transform : scale(3.6)
+          }
+          
+          /* Jumbotron styles */
+          .jumbotron {
+            margin-top: 20px;
+            padding: 40px;
+            border: 5px solid var(--dark-accent);
+            border-radius: 10px;
+          }
+
+          .jumbotron h1 {
+            font-size: 4rem;
+          }
+
+          .jumbotron p {
+            font-size: 1.5rem;
+          }
+
+          /* Footer styles */
+          .footer {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+          }
+
+          /* Animation styles */
+          @keyframes slideInLeft {
+            from {
+              transform: translateX(-100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+
+          @keyframes slideInRight {
+            from {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+
+          .slide-in-left {
+            animation: slideInLeft 1s ease-in-out;
+          }
+
+          .slide-in-right {
+            animation: slideInRight 1s ease-in-out;
+          }
+
+          .fade-in {
+            animation: fadeIn 1s ease-in-out;
+          }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand" href="#">CodingGenix</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="roadmap.html" href="#">Roadmaps</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Source Codes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tips</a>
+            </li>
+        </ul>
+        <!-- Theme toggle -->
+        <input type="checkbox" id="switch"/>
+        <label for="switch">Toggle</label>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container">
+        <div class="jumbotron slide-in-left">
+        <h1>Welcome to CodingGenix!</h1>
+        <p>This is a website where you can learn programming with tips and tricks, tech knowledge, and front end projects.</p>
+        <p>My name is Avi and I'm a programmer who loves to share my knowledge and skills with others.</p>
+        <p>Here you can find some roadmaps to guide you on your learning journey, some source codes of my projects that you can use and modify, and some tips to improve your coding skills and productivity.</p>
+        <p>I hope you enjoy this website and find it useful and interesting.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <div class="footer fade-in">
+        <p>&copy; CodingGenix 2023. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      // Theme toggle
+      const checkbox = document.getElementById('switch');
+      const body = document.body;
+
+      checkbox.addEventListener('change', function() {
+        body.classList.toggle('light-theme');
+      });
+    </script>
+
+</body>
+</html>
