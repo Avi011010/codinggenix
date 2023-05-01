@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <style>
+        #output {
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Genix</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" href="input.css">
+</head>
+
+<body class="h-screen w-full bg-gray-200   dark:bg-black/90">
+    <!-- ========== Start Loader ========== -->
+    <div class="preload" data-preloader>
+        <div class="loader"></div>
+    </div>
+    <!-- ========== End Loader ========== -->
+
+    <!-- ========== Start Header ========== -->
+
+    <header class="w-full header transition-all z-[80]" data-header>
+
+        <div class="flex flex-row items-center justify-between responsive py-5 px-5">
+            <!-- Logo Here -->
+            <div class="logo">
+                <p>Coding</p>
+                <p>Genix</p>
+            </div>
+            <!-- Nav Links -->
+            <div class="hidden lg:flex">
+                <ul class="inline-flex gap-5 text-xl tracking-wider">
+                    <li class="linkstyle"><a href="index.html">Home</a></li>
+                    <li class="linkstyle"><a href="Road.html">Road Maps</a></li>
+                    <li class="linkstyle"><a href="source.html">Source Codes</a>
+                    </li>
+                    <li class="linkstyle"><a href="#post">Tips</a></li>
+                </ul>
+            </div>
+            <!-- ========== Start Mobile View ========== -->
+            <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]"
+                data-nav-toggler data-nav-toggle-btn>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn1 transition-all"></span>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn2 transition-all"></span>
+            </div>
+        </div>
+        <nav class="navbar lg:hidden h-screen bg-lime-600  fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]"
+            data-navbar>
+            <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                <div class="navlogo">
+                    <p>Coding</p>
+                    <p>Genix</p>
+                </div>
+            </div>
+            <ul class="navcontainer">
+                <li class="linkstyle text-lime-600 dark:text-lime-500 linkstyle" data-nav-links><a
+                        href="index.html">Home</a>
+                </li>
+                <li class="linkstyle" data-nav-links><a href="Road.html">Road Maps</a></li>
+                <li class="linkstyle" data-nav-links><a href="source.html">Source Codes</a></li>
+                <li class="linkstyle" data-nav-links><a href="#post">Tips</a></li>
+            </ul>
+            <ul class="navcontainer2">
+                <li>
+                    <ion-icon class="navicon" name="mail"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon class="navicon" name="logo-facebook"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon class="navicon" name="logo-linkedin"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon class="navicon" name="logo-instagram"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon class="navicon" name="logo-twitter"></ion-icon>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay h-screen top-0 left-0 bg-darkvio fixed z-[70] w-screen opacity-0 pointer-events-none"
+            data-overlay data-nav-toggler></div>
+
+        <!-- ========== End Mobile View ========== -->
+        </div>
+    </header>
+
+    <!-- ========== End Header ========== -->
+
+    <!-- ========== Start Hero Section ========== -->
+
+
+    <section class="py-20">
+        <div class="responsive items-center justify-center flex flex-col">
+            <p
+                class="text-5xl font-semibold tracking-wide text-gray-600 flex flex-col sm:flex-row items-center gap-5 dark:text-white text-center">
+                Our Code Editor <ion-icon name="code-download-sharp"
+                    class="animate-bounce text-lime-600 dark:text-lime-500"></ion-icon>
+            </p>
+            <p class="uppercase tracking-widest font-bold text-gray-500 pt-5 text-sm text-center">Type some <span
+                    class="text-lime-600 dark:text-lime-500">HTML</span>
+                <span class="text-lime-600 dark:text-lime-500">Code</span> in the box and see the<span
+                    class="text-lime-600 dark:text-lime-500"> Magic</span>
+            </p>
+
+            <section class="w-full
+
+            ">
+                <div class="responsive pt-10 flex flex-col gap-7 md:gap-5">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-content-center place-items-center  gap-10 w-full">
+                        <div class="w-full h-full">
+                            <p class="text-2xl font-semibold text-gray-600 ">
+                                Input</p>
+                            <textarea id="editor"
+                                class="h-[600px] sm:h-[900px] w-full sm:resize-none tracking-wider bg-black/90 dark:shadow-lg dark:shadow-lime-500 dark:bg-transparent text-lime-600 font-semibold p-5 text-xl selection:bg-lime-600 selection:text-gray-300 outline-lime-500"
+                                placeholder="Write Something......"></textarea>
+                        </div>
+
+                        <div class="w-full h-full">
+                            <p class="text-2xl font-semibold text-gray-600  ">
+                                Output</p>
+                            <iframe id="output"
+                                class="h-[600px] sm:h-[900px] w-full bg-slate-100 dark:shadow-lg dark:shadow-lime-500"></iframe>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- ========== End Hero Section ========== -->
+    <!-- ========== Start DarkButton ========== -->
+    <div class="darkbtn px-3 fixed  sm:rotate-90  bottom-10 right-0 sm:bottom-20 sm:-right-10 z-[100]">
+        <input type="checkbox" name="" id="toggle" class="hidden" />
+        <label for="toggle" class="flex md:space-x-2 justify-center items-center">
+            <span class="font-extrabold dark:text-gray-400 dark:font-semibold">
+                <ion-icon name="sunny" class="px-2 text-yellow-400 dark:text-gray-500"></ion-icon>
+            </span>
+            <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1 dark:bg-gray-500">
+                <div
+                    class="toggle-bot duration-300 ease-in-out w-4 h-4 bg-white rounded-full shadow-md dark:bg-gray-300">
+                </div>
+
+            </div>
+            <span class="dark:font-extrabold">
+                <ion-icon name="moon" class="px-2 text-gray-500 dark:text-blue-400"></ion-icon>
+            </span>
+        </label>
+    </div>
+
+    <!-- ========== End DarkButton ========== -->
+
+
+
+    <!-- ========== Start Scripts ========== -->
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+
+    </script>
+
+    <!-- ========== End Scripts ========== -->
+
+
+</body>
+
+</html>
