@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Coding Genix" />
+    <meta name="keywords" content="Tailwind CSS" />
+    <meta name="author" content="Smooky Dev" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Genix</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" href="input.css">
+</head>
+
+<body class="h-screen w-full bg-gray-200 dark:bg-black/90">
+    <!-- ========== Start Loader ========== -->
+    <div class="preload" data-preloader>
+        <div class="loader"></div>
+    </div>
+    <!-- ========== End Loader ========== -->
+
+    <!-- ========== Start Header ========== -->
+
+    <header class="w-full header transition-all z-[80]" data-header>
+
+        <div class="flex flex-row items-center justify-between responsive py-5 px-5">
+            <!-- Logo Here -->
+            <div class="logo">
+                <p>Coding</p>
+                <p>Genix</p>
+            </div>
+            <!-- Nav Links -->
+            <div class="hidden lg:flex">
+                <ul class="inline-flex gap-5 text-xl tracking-wider">
+                    <li class="text-lime-600 dark:text-lime-500 linkstyle"><a href="index.html">Home</a></li>
+                    <li class="linkstyle"><a href="Road.html">Road Maps</a></li>
+                    <li class="linkstyle"><a href="sourcecode.html">Source Codes</a></li>
+                    <li class="linkstyle"><a href="tips.html">Tips</a></li>
+                </ul>
+            </div>
+            <!-- ========== Start Mobile View ========== -->
+            <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]"
+                data-nav-toggler data-nav-toggle-btn>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn1 transition-all"></span>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn2 transition-all"></span>
+            </div>
+        </div>
+        <nav class="navbar lg:hidden h-screen bg-lime-600  fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]"
+            data-navbar>
+            <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                <div class="navlogo">
+                    <p>Coding</p>
+                    <p>Genix</p>
+                </div>
+            </div>
+            <ul class="navcontainer">
+                <li class="linkstyle text-lime-600 dark:text-lime-500" data-nav-links><a href="index.html">Home</a></li>
+                <li class="linkstyle" data-nav-links><a href="Road.html">Road Maps</a></li>
+                <li class="linkstyle" data-nav-links><a href="sourcecode.html">Source Codes</a></li>
+                <li class="linkstyle" data-nav-links><a href="tips.html">Tips</a></li>
+            </ul>
+            <ul class="navcontainer2">
+                <li>
+                    <a href="mailto:darvince.1561@gmail.com"><ion-icon class="navicon" name="mail"></a></ion-icon>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/codinggenix/"></a><ion-icon class="navicon"
+                        name="logo-instagram"></ion-icon>
+                </li>
+                <li>
+                    <a href=" https://twitter.com/Abhi01301855?t=fu0Zbpg4ucG3cT-7AaJhgQ&s=08"></a><ion-icon
+                        class="navicon" name="logo-twitter"></ion-icon>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay h-screen top-0 left-0 bg-darkvio fixed z-[70] w-screen opacity-0 pointer-events-none"
+            data-overlay data-nav-toggler></div>
+
+        <!-- ========== End Mobile View ========== -->
+        </div>
+    </header>
+
+    <!-- ========== End Header ========== -->
+
+    <!-- ========== Start Hero Section ========== -->
+
+    <section class="pt-10">
+        <div class="responsive px-5">
+            <div class="flex items-center w-full justify-between gap-5 lg:min-h-[80vh] flex-col xl:flex-row">
+                <div class="texts flex flex-col w-full gap-8 lg:px-20 py-10" data-reveal="left">
+                    <p class="text-gray-600 dark:text-white font-semibold animate-pulse inline-flex items-center gap-2">
+                        Radhe Radhe! <ion-icon name="star-sharp" class="animate-spin"></ion-icon> </p>
+                    <p
+                        class="text-5xl tracking-widest font-semibold text-lime-600 dark:text-lime-500 lg:whitespace-nowrap">
+                        Welcome <span class="text-gray-600 dark:text-white">to Coding Genix</span>
+                    </p>
+                    <p class="text-5xl tracking-widest font-semibold text-gray-600 dark:text-white">
+                        I'm <span class="text-lime-600 dark:text-lime-500">Avi</span>
+                    </p>
+
+
+                    <p class="text-xl text-justify text-gray-600 dark:text-white leading-8">
+                        This is a website where you can learn programming with tips and tricks, tech knowledge, and
+                        front end projects.
+                    </p>
+                    <p class="text-xl text-justify text-gray-600 dark:text-white leading-8">
+                        Here you can find some roadmaps to guide you on your learning journey, some source codes of my
+                        projects that you can use
+                        and modify, and some tips to improve your coding skills and productivity.
+                    </p>
+                    <p class="text-xl text-justify text-lime-600 dark:text-lime-500 leading-8">
+                        I hope you enjoy this website and find it useful and interesting.
+                    </p>
+                    <button class="inline-flex">
+                        <a href="Road.html" class="btn3 after:w-[160%] group">
+                            <p>
+                                Start Your Journey</p>
+                            <ion-icon name="airplane-sharp"
+                                class="animate-bounce ml-5 transition-all duration-500 group-hover:text-lime-600 dark:text-lime-500"></ion-icon>
+                        </a>
+                    </button>
+                </div>
+                <div class="hidden w-full xl:h-[90vh] md:flex items-center justify-center relative overflow-hidden"
+                    data-reveal="right">
+                    <img loading="lazy" src="https://cdn.statically.io/gh/Avi011010/codinggenix/master/p3.png" alt="" srcset=""
+                        class="object-cover object-center w-full h-full rounded-lg z-20 cursor-pointer" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== End Hero Section ========== -->
+
+
+
+
+
+
+
+    <!-- ========== Start DarkButton ========== -->
+    <div class="darkbtn px-3 fixed  sm:rotate-90  bottom-10 right-0 sm:bottom-20 sm:-right-10 z-[100]">
+        <input type="checkbox" name="" id="toggle" class="hidden" />
+        <label for="toggle" class="flex md:space-x-2 justify-center items-center">
+            <span class="font-extrabold dark:text-gray-400 dark:font-semibold">
+                <ion-icon name="sunny" class="px-2 text-yellow-400 dark:text-gray-500"></ion-icon>
+            </span>
+            <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1 dark:bg-gray-500">
+                <div
+                    class="toggle-bot duration-300 ease-in-out w-4 h-4 bg-white rounded-full shadow-md dark:bg-gray-300">
+                </div>
+
+            </div>
+            <span class="dark:font-extrabold">
+                <ion-icon name="moon" class="px-2 text-gray-500 dark:text-blue-400"></ion-icon>
+            </span>
+        </label>
+    </div>
+
+    <!-- ========== End DarkButton ========== -->
+
+
+
+    <!-- ========== Start Scripts ========== -->
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- ========== End Scripts ========== -->
+
+</body>
+
+</html>

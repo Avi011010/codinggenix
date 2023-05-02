@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Coding Genix" />
+    <meta name="keywords" content="Tailwind CSS" />
+    <meta name="author" content="Smooky Dev" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Genix</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" href="input.css">
+</head>
+
+<body class="h-screen w-full bg-gray-200   dark:bg-black/90">
+    <!-- ========== Start Loader ========== -->
+    <div class="fixed top-0 transition-all bg-black/90 duration-500 h-screen left-0 z-[100] w-full flex items-center justify-center preloader"
+        data-preloader>
+        <div class="loader"></div>
+    </div>
+    <!-- ========== End Loader ========== -->
+
+    <!-- ========== Start Header ========== -->
+
+    <header class="w-full header transition-all z-[80]" data-header>
+
+        <div class="flex flex-row items-center justify-between responsive py-5 px-5">
+            <!-- Logo Here -->
+            <div class="logo">
+                <p>Coding</p>
+                <p>Genix</p>
+            </div>
+            <!-- Nav Links -->
+            <div class="hidden lg:flex">
+                <ul class="inline-flex gap-5 text-xl tracking-wider">
+                    <li class="linkstyle"><a href="index.html">Home</a></li>
+                    <li class="linkstyle"><a href="Road.html">Road Maps</a></li>
+                    <li class="linkstyle"><a href="sourcecode.html">Source Codes</a></li>
+                    <li class="linkstyle text-lime-600 dark:text-lime-500"><a href="tips.html">Tips</a></li>
+                </ul>
+            </div>
+            <!-- ========== Start Mobile View ========== -->
+            <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]"
+                data-nav-toggler data-nav-toggle-btn>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn1 transition-all"></span>
+                <span class="px-3 py-[1px] bg-gray-600 drak:bg-gray-400 btn2 transition-all"></span>
+            </div>
+        </div>
+        <nav class="navbar lg:hidden h-screen bg-lime-600  fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]"
+            data-navbar>
+            <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                <div class="navlogo">
+                    <p>Coding</p>
+                    <p>Genix</p>
+                </div>
+            </div>
+            <ul
+                class="flex flex-col items-center justify-center w-full [&_li]:font-semibold gap-8 py-20 capitalize [&_li]:text-gray-200 [&_li]:cursor-pointer">
+                <li class="linkstyle" data-nav-links><a href="index.html">Home</a>
+                </li>
+                <li class="linkstyle" data-nav-links><a href="Road.html">Road Maps</a></li>
+                <li class="linkstyle" data-nav-links><a href="sourcecode.html">Source Codes</a></li>
+                <li class="linkstyle text-lime-600 dark:text-lime-500" data-nav-links><a href="tips.html">Tips</a></li>
+            </ul>
+            <ul class="navcontainer2">
+                <li>
+                    <a href="mailto:darvince.1561@gmail.com"><ion-icon class="navicon" name="mail"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/codinggenix/"><ion-icon class="navicon"
+                            name="logo-instagram"></ion-icon></a>
+                </li>
+                <li>
+                    <a href=" https://twitter.com/Abhi01301855?t=fu0Zbpg4ucG3cT-7AaJhgQ&s=08"><ion-icon class="navicon"
+                            name="logo-twitter"></ion-icon></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay h-screen top-0 left-0 bg-darkvio fixed z-[70] w-screen opacity-0 pointer-events-none"
+            data-overlay data-nav-toggler></div>
+
+        <!-- ========== End Mobile View ========== -->
+        </div>
+    </header>
+
+    <!-- ========== End Header ========== -->
+
+    <!-- ========== Start Hero Section ========== -->
+
+    <section class="py-20">
+        <div class="responsive items-center justify-center flex flex-col">
+            <p class="text-5xl font-semibold tracking-wide text-gray-600 flex flex-col sm:flex-row items-center gap-5 dark:text-white text-center"
+                data-reveal="right">
+                Tips and Tricks <ion-icon name="help-sharp"
+                    class="animate-bounce text-lime-600 dark:text-lime-500"></ion-icon></p>
+            <p class="uppercase tracking-widest font-bold text-gray-500 pt-5 text-sm text-center">Select a <span
+                    class="text-lime-600 dark:text-lime-500">post</span> from <span
+                    class="text-lime-600 dark:text-lime-500">embark</span>
+                below.</p>
+            <div class="py-20 flex flex-col gap-20 ">
+                <!-- Front End -->
+                <div class="flex gap-24 items-center px-0 xl:px-16 md:flex-row flex-col">
+                    <div class="roadmapcontainer group">
+                        <img src="https://www.fcmtravel.com/sites/default/files/styles/large/public/secure-large.png?itok=C3MQEYX6" alt=""
+                            class="roadimg w-[800px]">
+                        <div class="roadimghover">
+
+                            <a href="https://www.instagram.com/p/CrUm0KWPMUg/?utm_source=ig_web_copy_link"><ion-icon
+                                    name="arrow-forward-outline" class="qusticon"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="txt w-full flex gap-6 flex-col items-start ml-0">
+                        <p class="roadherotag">
+                            Secure Your Website</p>
+                        <p class="roadheroheading">
+                            What is Website
+                            Security?<ion-icon name="help-circle-sharp" class="animate-pulse"></ion-icon>
+                        </p>
+                        <p class="roadheropara">Web security is a broad category
+                            of security
+                            solutions that protect networks, computer systems,
+                            devices, and data from internet-based
+                            cyberattacks, such as malware, phishing, and theft.
+                            It involves strategies, infrastructure, training,
+                            and monitoring to prevent users from introducing malware
+                            and other threats to the network from malicious websites.
+                            It also includes firewall inspection, intrusion prevention system scanning,
+                            sandboxing, URL filtering, and other security and access controls.
+                            Web security is critical to business continuity and to reducing the security risk to
+                            organizations</p>
+                        <button>
+                            <a href="https://www.instagram.com/p/CrUm0KWPMUg/?utm_source=ig_web_copy_link"
+                                class="btn3 after:w-[160%] group">
+                                <p>
+                                    Expand your knowledge
+                                </p>
+                                <ion-icon name="chevron-back-sharp" class="roadheroarrowicon"></ion-icon>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- ux -->
+                <div class="flex md:flex-row-reverse gap-24 items-center px-0 xl:px-16 flex-col">
+                    <div class="roadmapcontainer group">
+                        <img src="https://cdn.statically.io/gh/Avi011010/codinggenix/master/ux.webp" alt=""
+                            class="roadimg w-[600px]">
+                        <div class="roadimghover">
+
+                            <a href="https://www.instagram.com/p/CrW_4j5vulu/?utm_source=ig_web_copy_link"><ion-icon
+                                    name="arrow-forward-outline" class="qusticon"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="txt w-full flex gap-6 flex-col items-start ml-0 ">
+                        <p class="roadherotag">
+                            Website UX</p>
+                        <p class="roadheroheading">
+                            What is Website
+                            UX?<ion-icon name="help-circle-sharp" class="animate-pulse"></ion-icon>
+                        </p>
+                        <p class="roadheropara">User experience (UX) design is the
+                            process design
+                            teams use to create products
+                            that provide meaningful and relevant experiences
+                            to users. UX design involves the design of the
+                            entire process of acquiring and integrating
+                            the product, including aspects of branding, design, usability and function.</p>
+                        <button>
+                            <a href="https://www.instagram.com/p/CrW_4j5vulu/?utm_source=ig_web_copy_link"
+                                class="btn3 after:w-[160%] group">
+                                <p>
+                                    Expand your knowledge
+                                </p>
+                                <ion-icon name="chevron-back-sharp" class="roadheroarrowicon"></ion-icon>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== End Hero Section ========== -->
+
+
+
+
+
+
+    <!-- ========== Start DarkButton ========== -->
+    <div class="darkbtn px-3 fixed  sm:rotate-90  bottom-10 right-0 sm:bottom-20 sm:-right-10 z-[100]">
+        <input type="checkbox" name="" id="toggle" class="hidden" />
+        <label for="toggle" class="flex md:space-x-2 justify-center items-center">
+            <span class="font-extrabold dark:text-gray-400 dark:font-semibold">
+                <ion-icon name="sunny" class="px-2 text-yellow-400 dark:text-gray-500"></ion-icon>
+            </span>
+            <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1 dark:bg-gray-500">
+                <div
+                    class="toggle-bot duration-300 ease-in-out w-4 h-4 bg-white rounded-full shadow-md dark:bg-gray-300">
+                </div>
+
+            </div>
+            <span class="dark:font-extrabold">
+                <ion-icon name="moon" class="px-2 text-gray-500 dark:text-blue-400"></ion-icon>
+            </span>
+        </label>
+    </div>
+
+    <!-- ========== End DarkButton ========== -->
+
+
+
+    <!-- ========== Start Scripts ========== -->
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- ========== End Scripts ========== -->
+
+</body>
+
+</html>
