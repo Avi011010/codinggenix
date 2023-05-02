@@ -5,7 +5,6 @@
 const checkbox = document.querySelector("#toggle");
 const html = document.querySelector("html");
 const toggleDarkMode = function () {
-  // Check the value of the checkbox and set the class accordingly
   checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
   // Save the value of the checkbox in local storage
   localStorage.setItem("dark-mode", checkbox.checked);
@@ -88,3 +87,18 @@ const revealElementOnScroll = function () {
 window.addEventListener("scroll", revealElementOnScroll);
 
 window.addEventListener("load", revealElementOnScroll);
+
+// Get the elements from the document
+var editor = document.getElementById("editor");
+var output = document.getElementById("output");
+
+// Add an event listener to the editor
+editor.addEventListener("input", function () {
+  // Get the code from the editor
+  var code = editor.value;
+
+  // Write the code to the output iframe
+  output.contentWindow.document.open();
+  output.contentWindow.document.write(code);
+  output.contentWindow.document.close();
+});
